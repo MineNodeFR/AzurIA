@@ -34,12 +34,14 @@ Bienvenue dans la documentation officielle pour **AzurIA**, un bot Discord conç
    npm install
    ```
 
-3. Configurez vos variables d'environnement en créant un fichier `.env` :
-   ```env
-   DISCORD_TOKEN=VotreTokenDiscord
-   OPENROUTER_API_KEY=VotreCleAPI
-   GUILD_ID=VotreGuildID
-   CLIENT_ID=VotreClientID
+3. Configurez vos paramètres dans le fichier `config.js` :
+   ```javascript
+   module.exports = {
+       DISCORD_TOKEN: "Token du bot Discord.",
+       OPENROUTER_API_KEY: "Clé API pour accéder à OpenRouter.",
+       GUILD_ID: "ID du serveur Discord où le bot est actif",
+       CLIENT_ID: "ID client du bot."
+   };
    ```
 
 4. Lancez le bot :
@@ -51,11 +53,16 @@ Bienvenue dans la documentation officielle pour **AzurIA**, un bot Discord conç
 
 ## **Configuration** ⚙️
 
-### Variables d'environnement
-- `DISCORD_TOKEN` : Token du bot Discord.
-- `OPENROUTER_API_KEY` : Clé API pour accéder à OpenRouter.
-- `GUILD_ID` : ID du serveur Discord où le bot est actif.
-- `CLIENT_ID` : ID client du bot.
+### Fichier `config.js`
+Toutes les variables nécessaires sont définies dans le fichier `config.js`. Voici un exemple de configuration :
+```javascript
+module.exports = {
+    DISCORD_TOKEN: "VotreTokenDiscord",
+    OPENROUTER_API_KEY: "VotreCleAPI",
+    GUILD_ID: "VotreGuildID",
+    CLIENT_ID: "VotreClientID"
+};
+```
 
 ### Modèles utilisés 🧩
 AzurIA utilise plusieurs modèles d'IA pour répondre aux requêtes :
